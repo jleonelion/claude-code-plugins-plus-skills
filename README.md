@@ -1,9 +1,9 @@
 # Claude Code Skills & Plugins Hub
 
-[![Version](https://img.shields.io/badge/version-4.4.0-brightgreen)](000-docs/247-OD-CHNG-changelog.md)
+[![Version](https://img.shields.io/badge/version-4.6.0-brightgreen)](000-docs/247-OD-CHNG-changelog.md)
 [![CLI](https://img.shields.io/badge/CLI-ccpi-blueviolet?logo=npm)](https://www.npmjs.com/package/@intentsolutionsio/ccpi)
 [![Agent Skills](https://img.shields.io/badge/Agent%20Skills-739%20Skills-orange?logo=sparkles)](000-docs/247-OD-CHNG-changelog.md)
-[![Plugins](https://img.shields.io/badge/Total%20Plugins-258-blue)](https://github.com/jeremylongshore/claude-code-plugins-plus-skills)
+[![Plugins](https://img.shields.io/badge/Total%20Plugins-270-blue)](https://github.com/jeremylongshore/claude-code-plugins-plus-skills)
 [![2025 Schema](https://img.shields.io/badge/2025%20Schema-Compliant-success?logo=checkmarx)](tutorials/skills/05-skill-validation.ipynb)
 [![Tool Permissions](https://img.shields.io/badge/Tool%20Permissions-Secured-blueviolet?logo=shield)](tutorials/skills/02-skill-anatomy.ipynb)
 [![Interactive Tutorials](https://img.shields.io/badge/Tutorials-11%20Notebooks-yellow?logo=jupyter)](000-docs/185-MS-INDX-tutorials.md)
@@ -57,9 +57,9 @@
 
 **Claude Code plugins with embedded agent skills and interactive tutorials**
 
-**v4.4.0:** CLI 2.0 + vibe-guide plugin + Website Unification (521 routes).
+**v4.5.0:** CLI 2.0 + vibe-guide plugin + Website Unification (521 routes).
 
-**Latest:** [v4.4.0 Release](https://github.com/jeremylongshore/claude-code-plugins/releases/tag/v4.4.0)
+**Latest:** [v4.5.0 Release](https://github.com/jeremylongshore/claude-code-plugins/releases/tag/v4.5.0)
 
 ```bash
 /plugin marketplace add jeremylongshore/claude-code-plugins
@@ -141,6 +141,8 @@ ccpi validate ./my-plugin
 - **[@JackReis](https://github.com/JackReis) (Jack Reis)** - Contributed neurodivergent-visual-org plugin with ADHD-friendly Mermaid diagrams and accessibility features ([#106](https://github.com/jeremylongshore/claude-code-plugins-plus/pull/106))
 - **[@terrylica](https://github.com/terrylica) (Terry Li)** - Built prettier-markdown-hook with zero-config markdown formatting and comprehensive documentation ([#101](https://github.com/jeremylongshore/claude-code-plugins-plus/pull/101))
 - **[@clickmediapropy](https://github.com/clickmediapropy)** - Reported mobile horizontal scrolling bug, improving website UX ([#120](https://github.com/jeremylongshore/claude-code-plugins-plus/issues/120))
+- **[@BayramAnnakov](https://github.com/bayramannakov) (Bayram Annakov)** - 🧠 Created claude-reflect, a self-learning system that captures corrections during sessions and syncs them to CLAUDE.md - teaching Claude to remember your preferences! ([#241](https://github.com/jeremylongshore/claude-code-plugins-plus-skills/pull/241))
+- **[@jleonelion](https://github.com/jleonelion) (James Leone)** - 🔧 Fixed critical bash variable scoping bug in Learning Lab scripts and improved markdown formatting for better copy-paste experience ([#239](https://github.com/jeremylongshore/claude-code-plugins-plus-skills/pull/239))
 
 **Want to contribute?** See [000-docs/007-DR-GUID-contributing.md](./000-docs/007-DR-GUID-contributing.md) or reach out to **jeremy@intentsolutions.io**
 
@@ -343,8 +345,21 @@ This marketplace contains **two types of plugins** that work differently:
 - **What they are**: TypeScript/JavaScript applications
 - **How they work**: Run as separate Node.js processes that Claude can communicate with
 - **Examples**: project-health-auditor, conversational-api-debugger, domain-memory-agent
-- **Count**: 5 plugins (21 MCP tools total)
+- **Count**: 7 plugins (21 MCP tools total)
 - **Actual compiled code** - 13-26KB of executable JavaScript per plugin
+
+#### Tool Routing for Token Efficiency
+
+MCP servers load tool schemas into context. Manage active servers to optimize token usage:
+
+```bash
+/mcp                              # See active MCP servers
+/mcp disable design-to-code       # Disable unused server
+/mcp enable project-health-auditor # Enable when needed
+/context                          # Check context usage
+```
+
+**[Full Guide: ZCF Integration & Tool Routing →](docs/zcf-integration.md)**
 
 ---
 
@@ -449,6 +464,7 @@ ccpi validate ./my-awesome-plugin
 - [Marketplace Guide](docs/marketplace-guide.md) - Distribute your plugins
 - [Security Best Practices](docs/security-best-practices.md) - Secure plugin development
 - [MCP Server Status](./MCP-SERVERS-STATUS.md) - MCP plugin configurations
+- [ZCF Integration](docs/zcf-integration.md) - Tool routing, BMAD workflows, token optimization
 
 ### Production Playbooks
 - [Production Playbooks Index](000-docs/206-DR-SOPS-readme.md) - 11 comprehensive guides (~53,500 words)
@@ -570,7 +586,7 @@ All templates are in the [`templates/`](templates/) directory with complete exam
 ## Statistics
 
 - **Plugin Packs**: 4 (62 total plugin components)
-- **MCP Plugins**: 5 (21 total MCP tools)
+- **MCP Plugins**: 7 (21 total MCP tools)
 - **Production Plugins**: 2 (git-commit-smart, overnight-dev)
 - **AI Agency Plugins**: 6 (complete business toolkit)
 - **Example Plugins**: 3 (hello-world, formatter, security-agent)

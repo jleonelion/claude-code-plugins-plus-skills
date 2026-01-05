@@ -336,6 +336,18 @@ importers:
         specifier: ^4.0.8
         version: 4.0.13(@types/debug@4.1.12)(@types/node@20.19.27)(jiti@2.6.1)(lightningcss@1.30.2)(tsx@4.21.0)(yaml@2.8.2)
 
+  plugins/saas-packs/cursor-pack: {}
+
+  plugins/saas-packs/klingai-pack: {}
+
+  plugins/saas-packs/openrouter-pack: {}
+
+  plugins/saas-packs/sentry-pack: {}
+
+  plugins/saas-packs/supabase-pack: {}
+
+  plugins/saas-packs/vercel-pack: {}
+
 packages:
 
   '@alloc/quick-lru@5.2.0':

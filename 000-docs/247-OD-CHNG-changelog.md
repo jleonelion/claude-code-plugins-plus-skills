@@ -1,3 +1,104 @@
+## [4.6.0] - 2025-01-04
+
+### 🎯 Release Highlights
+
+**Community Plugin + Bug Fixes** - This release adds the claude-reflect self-learning plugin, fixes critical schema validation errors, and improves homepage UI.
+
+### 🙏 Contributors
+
+- **[@BayramAnnakov](https://github.com/bayramannakov)** - claude-reflect plugin (#241)
+- **[@jleonelion](https://github.com/jleonelion)** - Lab exercise fixes (#239)
+- **[@likeahoss](https://github.com/likeahoss)** - Reported schema validation error (#240)
+
+### 🔌 New Community Plugin
+
+- **claude-reflect** - Self-learning system that captures corrections during sessions and syncs them to CLAUDE.md automatically. Features 3 commands, 2 hooks, and 1 skill.
+
+### 🐛 Bug Fixes
+
+- **Schema Validation (#240)** - Fixed CLI marketplace installation failure by stripping `zcf_metadata` and `external_sync` from marketplace.json
+- **Homepage UI** - Fixed Nixtla marquee banner (SVG rendering) and What's Live Now section layout
+- **claude-reflect Skill** - Added 2025 schema compliant frontmatter (allowed-tools, version)
+
+### 📊 Statistics
+
+| Metric | v4.5.0 | v4.6.0 | Change |
+|--------|--------|--------|--------|
+| Plugins | 269 | 270 | +1 |
+| Skills | 739 | 740 | +1 |
+
+---
+
+## [4.5.0] - 2025-01-03
+
+### 🎯 Release Highlights
+
+**50-Vendor SaaS Skill Packs + ZCF Integration** - This release delivers 500 standalone skills (739 total), full ZCF framework compatibility, external plugin sync infrastructure, and MCP Registry integration.
+
+### 🙏 Contributors
+
+- **Jeremy Longshore** - SaaS Skill Packs, ZCF Integration, MCP Registry
+- **intentsolutions.io** - Infrastructure and release engineering
+
+### 🚀 50-Vendor SaaS Skill Packs (500 Skills)
+
+**Production-ready skills for 50 SaaS platforms** - Each vendor pack contains 30 skills covering API integration, troubleshooting, and advanced patterns.
+
+- **Skill Databases:** 105 vendor skill databases with researched content
+- **Flagship Packs:** Supabase, Vercel, OpenRouter, Kling AI published
+- **Template System:** 30 Jinja2 slot templates for consistent generation
+- **Pack Generator:** Automated skill pack creation from databases
+
+**Total Skills: 739** (500 standalone + 239 embedded in plugins)
+
+### 🔧 ZCF Integration (Issue #184)
+
+**Full compatibility with Zero Config Framework** - Install our MCPs via `npx zcf i`.
+
+- **Phase 1:** MCP Registry server.json manifests for 7 servers
+- **Phase 2:** ZCF preset configuration (mcp-presets.json, config.zcf.json)
+- **Phase 3:** PR #279 to UfoMiao/zcf adding our services
+- **Phase 4:** BMAD-compatible development workflows
+- **Phase 5:** Tool routing documentation for token optimization
+
+### 🔄 External Plugin Sync
+
+**Daily automated sync from upstream repos** - Keep community plugins fresh.
+
+- **sources.yaml:** Manifest for external skill sources
+- **sync-external.mjs:** Sync engine with attribution
+- **GitHub Actions:** Daily cron at midnight UTC
+- **First Sources:** gastown, zai-cli from @numman-ali/n-skills
+
+### 📊 New Features
+
+- **Attribution Tracking Engine** - Analytics for plugin usage
+- **Mobile Chat Monitoring UI** - Real-time chat interface
+- **Plugin Comparison View** - Side-by-side plugin comparisons
+- **Trust Signals & Bookmarks** - Quality indicators
+- **Keyboard Navigation** - Enhanced accessibility
+- **Enhanced Search** - Curated collections
+- **Dynamic Homepage Stats** - Live metrics from search index
+
+### 🔧 Fixes & Improvements
+
+- **Playbooks:** Template literal escaping with HTML entities
+- **Colab Links:** Corrected notebook links in Learning Lab
+- **Validators:** Aligned frontmatter with Nixtla standards
+- **Internal Links:** Integrity validation guardrails
+- **CI:** Relaxed agent frontmatter validation to warnings
+
+### 📈 Statistics
+
+| Metric | v4.4.0 | v4.5.0 | Change |
+|--------|--------|--------|--------|
+| Agent Skills | 244 | 739 | +495 |
+| Plugins | 258 | 260 | +2 |
+| MCP Servers | 5 | 7 | +2 |
+| Skill Databases | 0 | 105 | +105 |
+
+---
+
 ## [4.4.0] - 2025-12-26
 
 ### 🎯 Release Highlights
